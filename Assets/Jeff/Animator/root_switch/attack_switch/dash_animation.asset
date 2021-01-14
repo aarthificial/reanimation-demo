@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: dash_animation
+  m_EditorClassIdentifier: 
+  autoIncrement: 0
+  percentageBased: 1
+  driver: attack
+  drivers:
+    keys: []
+    values: 
+  guid: 6756819a-ce92-43b9-93e4-c9b9ae8f90a4
+  frames:
+  - sprite: {fileID: 21300000, guid: 9b4b144a506f6cd4aacbc85566be50ec, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: de01cedbd74eb5948b280fb8b69332b3, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: e83dad23b92080f42a6ed6e3999240bc, type: 3}
+    drivers:
+      keys:
+      - state
+      values: 00000000

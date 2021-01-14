@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: idle_animation
+  m_EditorClassIdentifier: 
+  autoIncrement: 1
+  percentageBased: 0
+  driver: debd8d0b-6248-4f16-96c7-adbbccf4ca5a
+  drivers:
+    keys: []
+    values: 
+  guid: debd8d0b-6248-4f16-96c7-adbbccf4ca5a
+  frames:
+  - sprite: {fileID: 21300000, guid: 1ba7939ae12f0d24183e115fd947e872, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: 177fd9c9354e45d4fb7c65509c5b598e, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: d18e4d51430f6724a88e0901d3b1a3e8, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: 1bd5f40472677f64095702785cd1ee0d, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: aa0d9cbc6a2e1e44f8a5f3fb718b0ccb, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 21300000, guid: 2181845d9b78c81438928c15570ed837, type: 3}
+    drivers:
+      keys: []
+      values: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: air_movement_switch
+  m_EditorClassIdentifier: 
+  autoIncrement: 0
+  percentageBased: 0
+  driver: movement
+  drivers:
+    keys:
+    - idleTransition
+    values: 02000000
+  guid: a0151d0d-ca61-4729-b86b-69844cd41480
+  nodes:
+  - {fileID: 11400000, guid: bcba8d72bc26c004cb940eea53cc7db0, type: 2}
+  - {fileID: 11400000, guid: d46768ddd2e0b3f49877c58e4170dfda, type: 2}
