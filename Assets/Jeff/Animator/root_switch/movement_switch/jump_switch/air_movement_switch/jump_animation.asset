@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: jump_animation
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: jumpDirection
-  drivers:
-    keys: []
-    values: 
-  guid: 368cc8b2-2457-4fb0-9536-e9003d0353f3
   frames:
   - sprite: {fileID: 21300000, guid: cf7d49676a65ecd4d84da229c40f6e98, type: 3}
     drivers:
@@ -28,3 +21,11 @@ MonoBehaviour:
     drivers:
       keys: []
       values: 
+  controlDriver:
+    name: jumpDirection
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 37e7ff66-8793-4829-864a-f117a184ac23
+  drivers:
+    keys: []
+    values: 

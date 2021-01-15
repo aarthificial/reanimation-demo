@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: hit_animation
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: hitDirection
-  drivers:
-    keys: []
-    values: 
-  guid: 1fa86197-5e62-41dc-890e-61e0570d6816
   frames:
   - sprite: {fileID: 21300000, guid: fcc7078d2ea549148aaa2a8e91d9ba65, type: 3}
     drivers:
@@ -32,3 +25,11 @@ MonoBehaviour:
     drivers:
       keys: []
       values: 
+  controlDriver:
+    name: hitDirection
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 28bd8db8-c4c1-48ec-9c76-4bd9fadf42d2
+  drivers:
+    keys: []
+    values: 

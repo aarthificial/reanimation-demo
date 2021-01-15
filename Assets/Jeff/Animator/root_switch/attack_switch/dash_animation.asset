@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: dash_animation
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 1
-  driver: attack
-  drivers:
-    keys: []
-    values: 
-  guid: 6756819a-ce92-43b9-93e4-c9b9ae8f90a4
   frames:
   - sprite: {fileID: 21300000, guid: 9b4b144a506f6cd4aacbc85566be50ec, type: 3}
     drivers:
@@ -33,3 +26,11 @@ MonoBehaviour:
       keys:
       - state
       values: 00000000
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 1
+    guid: c4d1881b-191e-49be-b1d2-85fffb232144
+  drivers:
+    keys: []
+    values: 

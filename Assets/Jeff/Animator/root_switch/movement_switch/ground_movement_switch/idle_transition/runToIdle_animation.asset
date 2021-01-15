@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: runToIdle_animation
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: _oneOff
-  drivers:
-    keys: []
-    values: 
-  guid: 430dc4a2-3aee-4622-8926-42084dd4073c
   frames:
   - sprite: {fileID: 21300000, guid: 4d5827bdeaeb789468f734cee83e7eaf, type: 3}
     drivers:
@@ -30,3 +23,11 @@ MonoBehaviour:
       keys:
       - idleTransition
       values: 00000000
+  controlDriver:
+    name: _oneOff
+    autoIncrement: 0
+    percentageBased: 0
+    guid: a6777327-8946-4f16-9601-4782a8028344
+  drivers:
+    keys: []
+    values: 

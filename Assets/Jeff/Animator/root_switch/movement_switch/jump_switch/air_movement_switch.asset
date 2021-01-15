@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: air_movement_switch
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: movement
+  nodes:
+  - {fileID: 11400000, guid: bcba8d72bc26c004cb940eea53cc7db0, type: 2}
+  - {fileID: 11400000, guid: d46768ddd2e0b3f49877c58e4170dfda, type: 2}
+  controlDriver:
+    name: movement
+    autoIncrement: 0
+    percentageBased: 0
+    guid: f6f44a11-7cf1-4997-bd49-00e6990f2dfd
   drivers:
     keys:
     - idleTransition
     values: 02000000
-  guid: a0151d0d-ca61-4729-b86b-69844cd41480
-  nodes:
-  - {fileID: 11400000, guid: bcba8d72bc26c004cb940eea53cc7db0, type: 2}
-  - {fileID: 11400000, guid: d46768ddd2e0b3f49877c58e4170dfda, type: 2}

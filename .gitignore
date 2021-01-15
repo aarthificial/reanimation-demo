@@ -58,6 +58,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+*.aab
 *.unitypackage
 
 # Crashlytics generated file
@@ -95,7 +96,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-Plugins
-DefaultPlayables
-TextMesh Pro
+# Packages
+Packages/com.aarthificial.reanimation
+Packages/Reanimation
+
+# IDE
 .idea

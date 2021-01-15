@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: air_dash_animation
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 1
-  driver: attack
-  drivers:
-    keys: []
-    values: 
-  guid: 68dd6365-b80c-4dd5-a7fd-b75aadfacb95
   frames:
   - sprite: {fileID: 21300000, guid: cb5b93ec7dd5670498a9caca8f568602, type: 3}
     drivers:
@@ -33,3 +26,11 @@ MonoBehaviour:
       keys:
       - state
       values: 00000000
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 1
+    guid: 9996f86e-8fdd-45d4-95d7-6dcaa7d8c9fc
+  drivers:
+    keys: []
+    values: 

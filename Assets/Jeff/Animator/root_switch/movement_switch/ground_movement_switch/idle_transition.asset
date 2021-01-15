@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: idle_transition
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: idleTransition
-  drivers:
-    keys: []
-    values: 
-  guid: 58b88d76-3736-49bc-a6c9-79da0d7e91ce
   nodes:
   - {fileID: 11400000, guid: fab5bf30103caa9438736e0c00d220b6, type: 2}
   - {fileID: 11400000, guid: 41866b927f0afa04ebc12d06f905d6eb, type: 2}
   - {fileID: 11400000, guid: 34e4b0edd6b88c242aa33ca18702d7e5, type: 2}
+  controlDriver:
+    name: idleTransition
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 2637c4f2-a5c1-4d62-b79c-8c46c8908ac6
+  drivers:
+    keys: []
+    values: 

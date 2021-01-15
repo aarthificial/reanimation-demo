@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: jump_switch
   m_EditorClassIdentifier: 
-  autoIncrement: 0
-  percentageBased: 0
-  driver: 0dc2f0af-5e41-467c-8166-cafcb4dba7eb
+  nodes:
+  - {fileID: 11400000, guid: e5ae2e4c27e54014391c2377479cbfd5, type: 2}
+  - {fileID: 11400000, guid: c715fbf941bce1a42b1beb1bcafde72a, type: 2}
+  controlDriver:
+    name: jumpNumber
+    autoIncrement: 0
+    percentageBased: 0
+    guid: ec72b880-48d7-470d-8145-a4ba6822ed84
   drivers:
     keys: []
     values: 
-  guid: 0dc2f0af-5e41-467c-8166-cafcb4dba7eb
-  nodes: []

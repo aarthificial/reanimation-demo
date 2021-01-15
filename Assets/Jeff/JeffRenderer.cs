@@ -39,7 +39,6 @@ namespace Jeff
         private void Update()
         {
             var velocity = _controller.Velocity;
-            bool shouldRerender = _controller.IsGrounded && !_reanimator.State.GetBool(IsGroundedDriver);
 
             _reanimator.Set(IsGroundedDriver, _controller.IsGrounded);
 
@@ -65,8 +64,11 @@ namespace Jeff
             else
                 _reanimator.Set(HitDirectionDriver, 0);
 
-            if (shouldRerender)
+            if (_reanimator.WillChange(IsGroundedDriver, 1)
+                || _reanimator.WillChange(StateDriver, (int) JeffState.Attack))
+            {
                 _reanimator.ForceRerender();
+            }
         }
 
         private bool _isRed;
