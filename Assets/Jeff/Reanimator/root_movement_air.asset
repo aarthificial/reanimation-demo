@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e5ae2e4c27e54014391c2377479cbfd5, type: 2}
   - {fileID: 11400000, guid: c715fbf941bce1a42b1beb1bcafde72a, type: 2}
   controlDriver:
-    name: jumpNumber
+    name: shouldFlip
     autoIncrement: 0
     percentageBased: 0
     guid: ec72b880-48d7-470d-8145-a4ba6822ed84

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: hat_runToIdle_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: 6499c917f7cc83f49b0cf5f28b16d5cc, type: 3}
     drivers:
       keys:
       - stepEvent
-      - _oneOff
+      - temporary
       values: 0100000001000000
   - sprite: {fileID: 21300000, guid: 3d3fae066eb9f684b9bac09b11b7008a, type: 3}
     drivers:
@@ -25,7 +25,7 @@ MonoBehaviour:
       - idleTransition
       values: 00000000
   controlDriver:
-    name: _oneOff
+    name: temporary
     autoIncrement: 0
     percentageBased: 0
     guid: 1c88771d-4b30-4da0-b18d-cec461aee14f

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: flip_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: 5fb2d2a6eff4de045870d164eec38815, type: 3}
     drivers:
       keys: []
@@ -34,7 +34,7 @@ MonoBehaviour:
       keys: []
       values: 
   controlDriver:
-    name: flip
+    name: flipCompletion
     autoIncrement: 0
     percentageBased: 1
     guid: 1d8062b7-da6b-4532-b420-519ec584b75c
