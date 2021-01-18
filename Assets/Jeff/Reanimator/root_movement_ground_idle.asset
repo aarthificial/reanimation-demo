@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: root_movement_ground_idle
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: fab5bf30103caa9438736e0c00d220b6, type: 2}
+  - {fileID: 11400000, guid: 41866b927f0afa04ebc12d06f905d6eb, type: 2}
+  - {fileID: 11400000, guid: 34e4b0edd6b88c242aa33ca18702d7e5, type: 2}
+  controlDriver:
+    name: idleTransition
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 2637c4f2-a5c1-4d62-b79c-8c46c8908ac6
+  drivers:
+    keys: []
+    values: 

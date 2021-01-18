@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,9 @@ namespace Jeff
     [RequireComponent(typeof(Rigidbody2D))]
     public class JeffController : MonoBehaviour
     {
+        public event Action Hat;
+        public event Action Hit;
+        
         [Header("Walking")] 
         [SerializeField] private float maxWalkCos = 0.5f;
         [SerializeField] private float walkSpeed = 7;
@@ -82,6 +86,11 @@ namespace Jeff
         {
             EnterAttackState();
         }
+
+        public void OnHat(InputValue value)
+        {
+            Hat?.Invoke();
+        }
         
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -94,9 +103,9 @@ namespace Jeff
 
         private void Recalculate()
         {
-            if (_rigidbody2D.velocity.x > 0.1f)
+            if (_rigidbody2D.velocity.x > 0.1f || DesiredMovementDirection.x > 0.01f)
                 FacingDirection = 1;
-            else if (_rigidbody2D.velocity.x < -0.1f)
+            else if (_rigidbody2D.velocity.x < -0.1f || DesiredMovementDirection.x < -0.01f)
                 FacingDirection = -1;
 
             _groundContact = null;
@@ -153,7 +162,8 @@ namespace Jeff
         {
             if (State != JeffState.Hit && !hitStopwatch.IsReady) return;
             State = JeffState.Hit;
-
+            Hit?.Invoke();
+            
             hitStopwatch.Split();
             _rigidbody2D.AddForce(
                 direction * bounceBackStrength - _rigidbody2D.velocity,

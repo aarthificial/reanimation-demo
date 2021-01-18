@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: runToIdle_animation
+  m_EditorClassIdentifier: 
+  frames:
+  - sprite: {fileID: 21300000, guid: 4d5827bdeaeb789468f734cee83e7eaf, type: 3}
+    drivers:
+      keys:
+      - stepEvent
+      - _oneOff
+      values: 0100000001000000
+  - sprite: {fileID: 21300000, guid: c2b9e223a6ab76b4a82a4ce541989d12, type: 3}
+    drivers:
+      keys:
+      - idleTransition
+      values: 00000000
+  controlDriver:
+    name: _oneOff
+    autoIncrement: 0
+    percentageBased: 0
+    guid: a6777327-8946-4f16-9601-4782a8028344
+  drivers:
+    keys: []
+    values: 

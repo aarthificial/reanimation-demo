@@ -1,10 +1,14 @@
-﻿using Aarthificial.Reanimation;
+﻿using System.Collections.Generic;
+using Aarthificial.Reanimation;
 using UnityEngine;
 
 namespace Jeff
 {
     public class JeffRenderer : MonoBehaviour
     {
+        [SerializeField] private List<AudioClip> stepSounds = new List<AudioClip>();
+        [SerializeField] private List<AudioClip> hitSounds = new List<AudioClip>();
+
         private const string StateDriver = "state";
         private const string MovementDriver = "movement";
         private const string AttackDriver = "attack";
@@ -14,26 +18,39 @@ namespace Jeff
         private const string OneOffDriver = "_oneOff";
         private const string JumpNumberDriver = "jumpNumber";
         private const string FlipDriver = "flip";
+        private const string HatDriver = "hasHat";
+        private const string StepEventDriver = "stepEvent";
 
         private Reanimator _reanimator;
+        private AudioSource _audioSource;
         private JeffController _controller;
+
+        private bool _isRed;
+        private bool _hasHat;
 
         private void Awake()
         {
             _reanimator = GetComponent<Reanimator>();
             _controller = GetComponent<JeffController>();
+            _audioSource = GetComponent<AudioSource>();
 
             _reanimator.AddOneOffDriver(OneOffDriver);
         }
 
         private void OnEnable()
         {
+            _reanimator.AddListener(StepEventDriver, HandleStep);
             _reanimator.Ticked += UpdateColor;
+            _controller.Hat += HandleHat;
+            _controller.Hit += HandleHit;
         }
 
         private void OnDisable()
         {
+            _reanimator.RemoveListener(StepEventDriver, HandleStep);
             _reanimator.Ticked -= UpdateColor;
+            _controller.Hat -= HandleHat;
+            _controller.Hit -= HandleHit;
         }
 
         private void Update()
@@ -41,6 +58,7 @@ namespace Jeff
             var velocity = _controller.Velocity;
 
             _reanimator.Set(IsGroundedDriver, _controller.IsGrounded);
+            _reanimator.Set(HatDriver, _hasHat);
 
             if (Mathf.Abs(_controller.DesiredMovementDirection.x) < 0.01f || Mathf.Abs(velocity.x) < 0.1f)
                 _reanimator.Set(MovementDriver, false);
@@ -64,14 +82,15 @@ namespace Jeff
             else
                 _reanimator.Set(HitDirectionDriver, 0);
 
+            if (_reanimator.WillChange(IsGroundedDriver, 1))
+                HandleStep();
+
             if (_reanimator.WillChange(IsGroundedDriver, 1)
                 || _reanimator.WillChange(StateDriver, (int) JeffState.Attack))
             {
                 _reanimator.ForceRerender();
             }
         }
-
-        private bool _isRed;
 
         private void UpdateColor()
         {
@@ -85,6 +104,23 @@ namespace Jeff
                 _reanimator.Renderer.color = Color.white;
                 _isRed = true;
             }
+        }
+
+        private void HandleHat()
+        {
+            _hasHat = !_hasHat;
+        }
+
+        private void HandleHit()
+        {
+            if (hitSounds.Count > 0)
+                _audioSource.PlayOneShot(hitSounds[Random.Range(0, hitSounds.Count)]);
+        }
+
+        private void HandleStep()
+        {
+            if (stepSounds.Count > 0)
+                _audioSource.PlayOneShot(stepSounds[Random.Range(0, stepSounds.Count)]);
         }
     }
 }
