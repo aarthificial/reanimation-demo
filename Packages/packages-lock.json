@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.aarthificial.reanimation": {
-      "version": "file:D:/projects/reanimator/reanimation",
+      "version": "git@github.com:aarthificial/reanimation.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "be611eb6b5fe1688bd4ab41d5b0849b42b1cfe8f"
     },
     "com.unity.2d.animation": {
       "version": "5.0.3",

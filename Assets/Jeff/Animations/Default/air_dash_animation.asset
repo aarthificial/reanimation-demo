@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: air_dash_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: cb5b93ec7dd5670498a9caca8f568602, type: 3}
     drivers:
       keys: []

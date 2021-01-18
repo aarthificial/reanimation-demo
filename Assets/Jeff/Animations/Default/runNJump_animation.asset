@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: runNJump_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: 1665f96c6aa6aa84a94670dcb003790c, type: 3}
     drivers:
       keys: []

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: idle_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: 1ba7939ae12f0d24183e115fd947e872, type: 3}
     drivers:
       keys: []

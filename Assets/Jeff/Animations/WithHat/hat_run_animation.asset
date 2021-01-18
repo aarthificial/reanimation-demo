@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: hat_run_animation
   m_EditorClassIdentifier: 
-  frames:
+  cels:
   - sprite: {fileID: 21300000, guid: 972081ca751b0904fbb51b7e3f506bfd, type: 3}
     drivers:
       keys: []
@@ -23,8 +23,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 21300000, guid: 51e1e7740fcff254e902ea93fdbda33b, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - stepEvent
+      values: 00000000
   - sprite: {fileID: 21300000, guid: c4de58262c5f968488aeb6078a671834, type: 3}
     drivers:
       keys: []
@@ -39,8 +40,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 21300000, guid: 8ff62e65f219f534e8dd0261a7a85542, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - stepEvent
+      values: 00000000
   - sprite: {fileID: 21300000, guid: 14048d55f1bf08d4d8b58717ebaa8931, type: 3}
     drivers:
       keys: []
