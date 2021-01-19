@@ -48,7 +48,7 @@ MonoBehaviour:
       keys: []
       values: 
   controlDriver:
-    name: 
+    name: run
     autoIncrement: 1
     percentageBased: 0
     guid: 2ce154a4-f3a9-4e73-8714-3062008b4f53

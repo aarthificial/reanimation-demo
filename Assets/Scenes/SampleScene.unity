@@ -1450,6 +1450,9 @@ MonoBehaviour:
   root: {fileID: 11400000, guid: 48ff4247b7521ee40a08133930e89c3c, type: 2}
   renderer: {fileID: 1223313701}
   fps: 10
+  temporaryDrivers:
+  - temporary
+  - idleTransition
 --- !u!212 &1223313701
 SpriteRenderer:
   m_ObjectHideFlags: 0

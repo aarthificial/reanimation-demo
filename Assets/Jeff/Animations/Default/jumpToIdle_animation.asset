@@ -16,16 +16,15 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 3ad8a382836803b4885dae8a4b26976a, type: 3}
     drivers:
       keys:
-      - temporary
-      values: 01000000
+      - idleTransition
+      values: 02000000
   - sprite: {fileID: 21300000, guid: 3dea58bfac4336f43b4c31ce42cc7271, type: 3}
     drivers:
-      keys:
-      - idleTransition
-      values: 00000000
+      keys: []
+      values: 
   controlDriver:
     name: temporary
-    autoIncrement: 0
+    autoIncrement: 1
     percentageBased: 0
     guid: 21a20470-ab85-4afd-a357-f9f8a9a81e32
   drivers:

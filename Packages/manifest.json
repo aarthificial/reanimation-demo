@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.aarthificial.reanimation": "git@github.com:aarthificial/reanimation.git",
+    "com.aarthificial.reanimation": "https://github.com/aarthificial/reanimation.git",
     "com.unity.2d.animation": "5.0.3",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.0.2",

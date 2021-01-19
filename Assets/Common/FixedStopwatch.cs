@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Jeff
+namespace Common
 {
     [Serializable]
     public class FixedStopwatch
