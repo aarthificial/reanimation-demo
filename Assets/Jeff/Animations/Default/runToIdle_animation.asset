@@ -17,16 +17,15 @@ MonoBehaviour:
     drivers:
       keys:
       - stepEvent
-      - temporary
+      - idleTransition
       values: 0100000001000000
   - sprite: {fileID: 21300000, guid: c2b9e223a6ab76b4a82a4ce541989d12, type: 3}
     drivers:
-      keys:
-      - idleTransition
-      values: 00000000
+      keys: []
+      values: 
   controlDriver:
     name: temporary
-    autoIncrement: 0
+    autoIncrement: 1
     percentageBased: 0
     guid: a6777327-8946-4f16-9601-4782a8028344
   drivers:

@@ -19,12 +19,14 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 21300000, guid: 30f7a455774be23448809bd37087fa60, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - idleTransition
+      values: 02000000
   - sprite: {fileID: 21300000, guid: 16b97ca8a08d4e949abc58e0d4a68479, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - idleTransition
+      values: 02000000
   controlDriver:
     name: hitDirection
     autoIncrement: 0

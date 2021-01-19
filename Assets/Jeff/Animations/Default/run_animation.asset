@@ -19,9 +19,8 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 21300000, guid: 2a344837b5e2fd244b499d2e120be1fb, type: 3}
     drivers:
-      keys:
-      - stepSound
-      values: 01000000
+      keys: []
+      values: 
   - sprite: {fileID: 21300000, guid: 802358e4e62b07148af1166d79011a86, type: 3}
     drivers:
       keys:
@@ -37,9 +36,8 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 21300000, guid: 7e9bfee2b675255439a092226fc78bea, type: 3}
     drivers:
-      keys:
-      - stepSound
-      values: 00000000
+      keys: []
+      values: 
   - sprite: {fileID: 21300000, guid: 1516929d134f17f42865e4293e025f2b, type: 3}
     drivers:
       keys:
@@ -50,7 +48,7 @@ MonoBehaviour:
       keys: []
       values: 
   controlDriver:
-    name: 
+    name: run
     autoIncrement: 1
     percentageBased: 0
     guid: 62c4c8dc-592a-4f5f-8e84-dd1555c1bde4

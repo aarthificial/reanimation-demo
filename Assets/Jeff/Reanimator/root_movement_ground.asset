@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d389b4832cc9d2d4d99feb55e9cfbbcf, type: 2}
   - {fileID: 11400000, guid: 80e20867077554c4d89d944ede960112, type: 2}
   controlDriver:
-    name: movement
+    name: isMoving
     autoIncrement: 0
     percentageBased: 0
     guid: 7054e958-3df3-4874-aa3d-fef6dcf9358b

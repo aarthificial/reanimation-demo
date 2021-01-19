@@ -27,7 +27,7 @@ MonoBehaviour:
       - state
       values: 00000000
   controlDriver:
-    name: 
+    name: attackCompletion
     autoIncrement: 0
     percentageBased: 1
     guid: c4d1881b-191e-49be-b1d2-85fffb232144

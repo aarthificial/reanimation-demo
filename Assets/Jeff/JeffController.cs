@@ -1,4 +1,5 @@
 using System;
+using Common;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,8 +33,6 @@ namespace Jeff
 
         public JeffState State { get; private set; } = JeffState.Movement;
         public Vector2 DesiredDirection { get; private set; }
-        public bool WantsToJump { get; private set; }
-        public bool IsMoving { get; private set; }
         public int FacingDirection { get; private set; } = 1;
 
         public bool IsGrounded => _groundContact.HasValue;
@@ -50,6 +49,7 @@ namespace Jeff
         private ContactPoint2D? _wallContact;
         private readonly ContactPoint2D[] _contacts = new ContactPoint2D[16];
 
+        private bool _wantsToJump;
         private bool _wasOnTheGround;
         private bool _canAttack;
         private int _jumpsLeft;
@@ -63,6 +63,8 @@ namespace Jeff
             _contactFilter.SetLayerMask(LayerMask.GetMask("Ground"));
         }
 
+        #region Events
+
         public void OnMove(InputValue value)
         {
             DesiredDirection = value.Get<Vector2>();
@@ -70,9 +72,9 @@ namespace Jeff
 
         public void OnJump(InputValue value)
         {
-            WantsToJump = value.Get<float>() > 0.5f;
+            _wantsToJump = value.Get<float>() > 0.5f;
 
-            if (WantsToJump)
+            if (_wantsToJump)
                 RequestJump();
             else
                 jumpStopwatch.Reset();
@@ -99,6 +101,8 @@ namespace Jeff
             if (other.gameObject.layer != _enemyLayer || State == JeffState.Hit) return;
             EnterHitState(other);
         }
+
+        #endregion
 
         private void RequestJump()
         {
@@ -161,6 +165,8 @@ namespace Jeff
             }
         }
 
+        #region States
+
         private void EnterHitState(Collision2D collision)
         {
             if (State != JeffState.Hit && !hitStopwatch.IsReady) return;
@@ -221,19 +227,12 @@ namespace Jeff
             var previousVelocity = _rigidbody2D.velocity;
             var velocityChange = Vector2.zero;
 
-            IsMoving = false;
-            if (previousVelocity.x > 0.1f && DesiredDirection.x > 0.01f)
-            {
-                IsMoving = true;
+            if (DesiredDirection.x > 0)
                 FacingDirection = 1;
-            }
-            else if (previousVelocity.x < -0.1f && DesiredDirection.x < -0.01f)
-            {
-                IsMoving = true;
+            else if (DesiredDirection.x < 0)
                 FacingDirection = -1;
-            }
 
-            if (WantsToJump && IsJumping)
+            if (_wantsToJump && IsJumping)
             {
                 _wasOnTheGround = false;
                 float currentJumpSpeed = IsFirstJump ? firstJumpSpeed : jumpSpeed;
@@ -273,5 +272,7 @@ namespace Jeff
 
             _rigidbody2D.AddForce(velocityChange, ForceMode2D.Impulse);
         }
+
+        #endregion
     }
 }
